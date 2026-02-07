@@ -10,4 +10,5 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Producto> Productos { get; set; }
+    public DbSet<User> Users { get; set; }
 }
