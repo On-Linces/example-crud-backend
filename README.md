@@ -20,6 +20,27 @@ cd Api
 dotnet run
 ```
 
+## Instalación
+- Instala los paquetes necesarios:
+  - `dotnet add package Microsoft.EntityFrameworkCore.Sqlite`
+  - `dotnet add package Microsoft.EntityFrameworkCore.Design`
+  - `dotnet add package Microsoft.EntityFrameworkCore.Tools`
+
+- Instala la CLI de EF Core:
+  - Global: `dotnet tool install --global dotnet-ef`
+  - Local (opcional): `dotnet new tool-manifest` (solo la primera vez) y `dotnet tool install dotnet-ef`
+
+- Verifica: `dotnet ef --version`
+
+- Crear una nueva migración:
+  - `dotnet ef migrations add NombreDeLaMigracion`
+
+- Aplicar las migraciones y actualizar la base de datos:
+  - `dotnet ef database update`
+
+- Eliminar la última migración (si necesitas deshacerla antes de aplicar):
+  - `dotnet ef migrations remove`
+
 - La API crea automáticamente la base de datos `productos.db` al iniciar.
 - CORS está configurado para permitir peticiones desde `http://localhost:5173` (dev frontend).
 - Swagger/OpenAPI está disponible en entorno de desarrollo.
@@ -36,6 +57,4 @@ dotnet run
 
 - Archivo SQLite: `Api/productos.db`
 
-## License
-
-Proprietary
+---
