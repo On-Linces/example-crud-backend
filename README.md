@@ -35,7 +35,3 @@ dotnet run
 ## Base de datos
 
 - Archivo SQLite: `Api/productos.db`
-
-## License
-
-Proprietary
