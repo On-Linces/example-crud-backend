@@ -9,6 +9,8 @@ public class AppDbContext : DbContext
     {
     }
 
+    // crear tablas en la bse de datos
     public DbSet<Producto> Productos { get; set; }
     public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Mascota> Mascotas { get; set; }
 }
